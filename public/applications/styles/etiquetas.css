@@ -1,0 +1,13 @@
+.bubble{
+        /* margin: 50px; */
+        padding: 2vh;
+        position: absolute;
+        /* border-radius: 8px 8px 8px 8px; */
+        background: #2bc9e5;
+        /* border-color: #394345; */
+        font-size: 3.5vh;
+        /* left: 138vh; */
+        /* top: 50vh; */
+        /* font-weight: bold; */
+        color: white;
+}

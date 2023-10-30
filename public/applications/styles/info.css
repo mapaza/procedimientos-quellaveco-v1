@@ -1,0 +1,189 @@
+
+.modal a {
+    color: inherit;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(0 0 0 / 68%);
+    z-index: 2;
+}
+.modal-container {
+    /* height: 80vh; */
+    max-width: 55vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    /* border-radius: 16px; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 600px) {
+    .modal-container {
+        width: 90%;
+   }
+}
+.modal-container-header {
+    padding: 1vh 3vh;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #031795;
+    text-align: center;
+    height: 2vh;
+    background: #031795;
+}
+.modal-container-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* line-height: 1; */
+    font-weight: 700;
+    font-size: 3vh;
+    text-align: center;
+}
+.modal-container-title svg {
+    width: 32px;
+    height: 32px;
+    color: #750550;
+}
+.modal-container-body {
+    padding: 3vh 7vh 0  6vh;
+    overflow-y: auto;
+    line-height: 4vh;
+}
+.rtf h1, .rtf h2, .rtf h3, .rtf h4, .rtf h5, .rtf h6 {
+    font-weight: 700;
+}
+.rtf h1 {
+    font-size: 1.5rem;
+    line-height: 1.125;
+}
+.rtf h2 {
+    font-size: 3vh;
+    line-height: 1.25;
+}
+.rtf h3 {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.rtf > * + * {
+    margin-top: 1em;
+    font-size: 2.35vh;
+    line-height: 2.35vh;
+}
+.rtf self > * + :is(h1, h2, h3) {
+    margin-top: 2em;
+}
+.rtf self > :is(h1, h2, h3) + * {
+    margin-top: 0.75em;
+}
+.rtf ul, .rtf ol {
+    margin-left: 0;
+    list-style-position: inside;
+}
+.rtf ol {
+    list-style: numeric;
+}
+.rtf ul {
+    list-style: disc;
+}
+.modal-container-footer {
+    padding: 1vh 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+.modal-container-footer:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -51px;
+    left: 24px;
+    right: 24px;
+    height: 50px;
+    flex-shrink: 0;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75), transparent);
+    pointer-events: none;
+}
+.button {
+    padding: 1.5vh 3vh;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s ease;
+    font-size: 2.25vh;
+    margin: 1vh;
+}
+.button.is-ghost:hover, .button.is-ghost:focus {
+    background-color: #dfdad7;
+}
+.button.is-primary {
+    background-color: #031795;
+    color: #fff;
+}
+.button.is-primary:hover, .button.is-primary:focus {
+    background-color: #031795;
+}
+.icon-button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.15s ease;
+}
+.icon-button svg {
+    width: 24px;
+    height: 24px;
+}
+.icon-button:hover, .icon-button:focus {
+    background-color: #dfdad7;
+}
+
+
+
+/*boton informacion */
+
+.container-boton-informacion {
+    /* width: auto; */
+    height: 8vh;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    background: #031795bd;
+    position: absolute;
+    right: 5vh;
+    top: 5vh;
+    color: #fff;
+    font-size: 2.25vh;
+    padding: 0vh 3vh;
+    place-items: center;
+    }
+    .container-boton-informacion:hover{
+     cursor: pointer;;
+    }
+    
+.img-info{
+    
+}

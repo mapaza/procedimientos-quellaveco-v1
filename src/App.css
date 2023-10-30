@@ -1,0 +1,149 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins:wght@400;700&display=swap");
+
+
+
+.box {
+  width: -moz-fit-content;
+  width: 49%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5vmin 3vmin 4vmin 5vmin;
+  border-radius: 7vmin;
+  background-color: #ffffff;
+  box-shadow: 0.8vmin 0.8vmin 3vmin 0.8vmin rgba(0, 0, 0, 0.4);
+  color: #f9f9f9;
+  margin: 6% 26%;
+  position: absolute;
+  font-family: Poppins;
+}
+
+.box h2 {
+	margin-bottom: 4vmin;
+    font-size: 5vmin;
+    FONT-WEIGHT: 800;
+    color: #BB8D42;
+}
+
+.ol {
+	list-style: none;
+	counter-reset: op-order-list;
+}
+
+.li {
+	counter-increment: op-order-list;
+	margin: 0.5vh;
+	font-size: 4vmin;
+	font-weight: 400;
+	transition: transform 1.2s ease;
+	text-align: left;
+	
+}
+
+.li::before {
+  content: counter(op-order-list);
+  width: 5vmin;
+  height: 5vmin;
+  margin-right: 2.2vmin;
+  padding-left: 1.6vmin;
+  padding-top: 0.6vmin;
+  border-radius: 50% 50% 0% 50%;
+  background: linear-gradient(135deg, #766d5e 0%, #c1b8a9ba 100%);
+  color: #1d1e22;
+  font-size: 3.5vh;
+  text-align: justify;
+  display: inline-block;
+  box-sizing: border-box;
+  transition: border-radius 1s ease, background 2s ease;
+  /* color: #fff; */
+  font-weight: 600;
+}
+
+.li:hover {
+	border-radius: 4vmin;
+	transform: translatex(6vmin);
+	font-weight: 700;
+}
+
+.li:hover::before {
+    background: linear-gradient( 135deg, #0a2344 0%, #0b356c8f 100% );
+    padding-left: 1vmin;
+    border-radius: 0% 50% 50% 50%;
+    color: #ffff;
+}
+
+
+.pens-light {
+	color: #1a238f;
+	text-decoration: none;
+	background: linear-gradient(to right, #1a238f 60%, #ff3300 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.laboratorio-link{
+	text-decoration: none;
+    color: black;
+    font-size: 2.5vh;
+}
+
+
+.flexbox-container {
+  background: #060606;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  min-height: 24em;
+  width: auto;
+}
+  
+
+
+.flexbox-item {
+  max-width: 50%;
+ 
+}
+
+.fixed {
+  flex: none;
+  max-width: 50%;
+}
+
+.demo {
+  width: 75vh;
+  padding: 1em;
+  background: olive;
+  width: -moz-fit-content;
+  /* width: 49%; */
+  height: -moz-fit-content;
+  /* height: fit-content; */
+  /* padding: 5vmin 3vmin 4vmin 5vmin; */
+  /* border-radius: 7vmin; */
+  background-color: #ffffff;
+  box-shadow: 0.8vmin 0.8vmin 3vmin 0.8vmin rgba(0, 0, 0, 0.4);
+  color: #f9f9f9;
+  /* margin: 6% 26%; */
+  /* position: absolute; */
+  font-family: Poppins;
+  position: relative;
+}
+.demo h2{
+        /* margin-bottom: 4vmin; */
+        font-size: 4.3vh;
+        font-weight: 800;
+        padding: 0 5vh;
+        color: #262f6c;
+        margin-bottom: 4vh;
+    
+}
+
+
+.logo-chinalco-menu {
+  position: absolute;
+  top: 4vh;
+  right: 6vh;
+  width: 13vh;
+}

@@ -1,0 +1,176 @@
+.container-preloader-main{
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 3;
+  position: absolute;
+}
+
+ .container-preloader{
+   position: absolute;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   transform: translate(0%,50vh);
+   /* background: #090000; */
+   z-index: 2;
+   /* height: 100vh; */
+ }
+ .wrapper{
+   position: absolute;
+   top: 0vh;
+   transform: scale(1.5);
+   /* margin: 4vh; */
+ }
+ .loader{
+   height: 2vh;
+   width: 1px;
+   position: absolute;
+   animation: rotate 3.5s linear infinite;
+ }
+ .loader .dot{
+   top: 5vh;
+   height: 1vh;
+   width: 1vh;
+   background: #031795;
+   border-radius: 50%;
+   position: relative;
+ }
+ .text{
+   position: absolute;
+   bottom: -21vh;
+   font-size: 3vh;
+   font-weight: 400;
+   font-family: sans-serif;
+   color: #031795;
+   font-family: 'Roboto', sans-serif;
+ }
+ .imagen-preloader{
+   position: absolute;
+   z-index: 2;
+   height: 20vh;
+   bottom: 7vh;
+ }
+ @keyframes rotate {
+   30%{
+     transform: rotate(220deg);
+   }
+   40%{
+   transform: rotate(450deg);
+     opacity: 1;
+  }
+  75%{
+   transform: rotate(720deg);
+   opacity: 1;
+  }
+  76%{
+   opacity: 0;
+  }
+  100%{
+   opacity: 0;
+   transform: rotate(0deg);
+  }
+ }
+ .loader:nth-child(1){
+   animation-delay: 0.15s;
+ }
+ .loader:nth-child(2){
+   animation-delay: 0.3s;
+ }
+ .loader:nth-child(3){
+   animation-delay: 0.45s;
+ }
+ .loader:nth-child(4){
+   animation-delay: 0.6s;
+ }
+ .loader:nth-child(5){
+   animation-delay: 0.75s;
+ }
+ .loader:nth-child(6){
+   animation-delay: 0.9s;
+ }
+
+
+/*    imagen powered by */
+.container-powered-by{
+position: absolute;
+bottom: 1vh;
+right: 1vh;
+height: 7vh;
+}
+.container-powered-by:hover{
+cursor: pointer;
+}
+.image-preloader{
+position: relative;
+margin: 0vh auto 0 auto;
+padding-bottom: 3vh;
+width: 43vh;
+}
+
+/* titulo header */
+
+.container-titulo-procedimiento {
+max-width: none;
+height: auto;
+margin: 0 auto;
+padding: 0vh 2vh;
+text-align: center;
+background: #031795bd;
+position: absolute;
+left: 5vh;
+top: 5vh;
+font-family: 'Roboto', sans-serif;
+color: #fff;
+}
+
+/* ----------------- */
+/* Sixth */
+
+h1.sixth {position: relative;font-size: 3.5vh;line-height: 5vh;}
+
+h1.sixth:before,
+h1.sixth:after {content: '[';display: inline-block;position: relative;top: 1px;height: 100%;font-size: 5vh;padding: 0 2vh;transition: all 0.75s ease;color: #FF0000;}
+
+h1.sixth:after { content: ']'; }
+
+h1.sixth:hover:before { 
+transform: translateX(-5px);
+}
+
+h1.sixth:hover:after {
+transform: translateX(15px);
+}
+#percentage{
+  
+background-color: #ffff;
+  
+font-size: 2.5vh;
+  
+font-family: 'Roboto';
+  
+color: #031795;
+}
+
+
+  /* FADE EFECTO CAMARA */
+  #fadeContainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    opacity: 0;
+    z-index: 3;
+    position: absolute;
+    transition: opacity 0.5s;
+    display: none;
+}
+#fadeContainer.fade{
+   
+    opacity: 1;
+    
+}
+#fadeContainer.fadeIn{
+   
+  opacity: 0;
+  
+}

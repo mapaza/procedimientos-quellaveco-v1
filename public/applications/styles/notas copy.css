@@ -1,0 +1,162 @@
+
+/* TITULO ESTILOS */
+.titulo-container{
+    width: 60vh;    
+    position: absolute;    
+    top: 5vh;   
+    left: 5vh;  
+    right: auto;
+    font-size: 3vh;
+    font-family: 'Roboto', sans-serif;
+    padding: 3vh 4vh;
+    text-align: center;
+    font-weight: bold;   
+}
+.titulo-container h2{
+    position: relative;
+	
+	padding: 0.5em 1em;
+}
+@keyframes hide {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0;
+	}
+}
+
+@keyframes show {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.titulo-container h2::before, .titulo-container h2::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	content: '';
+}
+
+.titulo-container h2::before {
+	background: #1098ad;
+	z-index: -1;
+	width: 0;
+}
+
+.titulo-container h2::after {
+	background: #262f38;
+	width: 100%;
+}
+
+.titulo-container h2.show::before {
+	animation: show 3s .3s forwards cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.titulo-container h2.show::after {
+	animation: hide 1.7s forwards cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+/* ESTILOS DE NOTAS */
+.container {
+    
+/* padding: 20px; */
+    
+/* padding-top: 100px; */
+    
+/* text-align: center; */
+    
+width: auto;
+    
+position: absolute;
+    
+top: 27vh;
+    
+left: 5vh;
+    
+right: auto;
+}
+.container .note {
+  background-color: #0b0b0b73;
+  position: relative;
+  overflow: hidden;
+  width: 67vh;
+  /* height: inherit; */
+  display: inline-block;
+  border-radius: 1vh;
+  font-family: 'Roboto', sans-serif;
+  /* margin: 20px; */
+  padding: 2vh 3vh;
+}
+.container .note img {
+    position: relative;
+    top: -15px;
+    left: -15px;
+    transition: all 0.2s ease;
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 70%);
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.container .note img:hover {
+    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+    transform: scale(1.1);
+}
+.container .note h2 {
+    text-align: left;
+    color: #fff;
+    font-size: 2.75vh;
+    font-weight: bold;
+    /* margin-bottom: 4px; */
+}
+.container .note .description {
+    text-align: justify;
+    font-size: 2vh;
+    color: #fff;
+    /* max-height: 23px; */
+    overflow: hidden;
+}
+.container .note .btn {
+    /* position: absolute; */
+    font-size: 2vh;
+    font-weight: bold;
+    float: right;
+    padding: 1vh;
+    border: 2px solid #FD5F00;
+    border-radius: 20px;
+    bottom: 2vh;
+    right: 10px;
+    color: #FD5F00;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    background: #498bb800;
+}
+.container .note .btn.ok {
+    background-color: rgba(0, 254, 254, .4);
+    color: #fff;
+}
+.container .note .btn.ok:after {
+    content: "\e080";
+    color: #fff;
+}
+.container .note .btn:hover {
+   
+}
+.container .note .btn:hover:after {
+    margin-left: 5px;
+}
+.container .note.btn:after {
+    font-family: 'simple-line-icons';
+    content: "a";
+    transition: all 0.2s ease;
+    position: absolute;
+    color: #00fefe;
+    margin-left: 30px;
+    transition: all 0.2s ease;
+}

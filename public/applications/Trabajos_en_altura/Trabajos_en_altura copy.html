@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title>Trabajos en altura</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> 
+  <!-- favicons -->
+  <link rel="icon" type="image/png" href="../imagenes/favicon.png">
+  
+  <script src="v3d.js"></script>
+  <script src="Trabajos_en_altura.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="Trabajos_en_altura.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../styles/notas.css">
+  <link rel="stylesheet" type="text/css" href="../styles/preloader.css">
+  <link rel="stylesheet" type="text/css" href="../styles/info.css">
+  <link rel="stylesheet" type="text/css" href="../styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="../styles//etiquetas.css">
+</head>
+
+<body>
+  <div id="v3d-container">
+    <!-- <div id="fullscreen-button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div> -->
+     <!-- preloader -->
+     <div class="container-preloader-main" id="preloader_screen">
+      <div class="container-preloader">
+        <div class="imagen-preloader">
+          <img src="../imagenes/logo-quellaveco.png" style="height: inherit;"/>
+        </div>
+        <div class="wrapper">
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+        </div>
+        <div class="text">
+           Cargando
+        </div>
+      </div>
+     </div>
+      <!-- end preloader -->
+   <!--  CONTAINER IMAGEN EDUVERSO -->
+   <div>
+      <img id="powered_by_eduverso_img" class="container-powered-by" style="display: none;"  src="../imagenes/logo-eduverso.png">
+   </div>
+   <!--  end CONTAINER IMAGEN EDUVERSO --> 
+
+   <!--  CONTAINER titulo -->
+   <div class="container-titulo-procedimiento" style="display: none;" id="titulo_container">
+      <h1 class="sixth">TRABAJOS EN ALTURA</h1>
+   </div>  
+   <!--  end CONTAINER titulo -->
+
+   <!--  Boton para abrir Ventana de informacion -->
+   <div class="container-boton-informacion" style="display: none;" id="btn_abrir_informacion">
+      <h1 >ℹ</h1>
+   </div>  
+   <!--  end  Boton para abrir Ventana de informacion-->
+
+   <!-- Ventana de informacion -->
+   <div class="modal" id="info_screen" style="display: none;">
+      <article class="modal-container">
+        <header class="modal-container-header">
+          <h1 class="modal-container-title">
+           
+          </h1>
+        <!--   <button class="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+            </svg>
+          </button> -->
+        </header>
+        <section class="modal-container-body rtf">
+          <h2>Bienvenido al procedimiento interactivo de "Trabajos en espacios confinados"</h2>
+
+          <!-- <h2>Instrucciones</h2> -->
+          <p>Utilice los controles del mouse para interactuar con el escenario</p>
+          <ol>
+            <li>Para rotar y desplazarse por las vistas del laboratorio utilice el botón izquierdo del mouse</li>
+            <li style="
+                  list-style: none;
+                  text-align: -webkit-center;
+              ">
+              <img style="height: 15vh; padding: 2vh 0;"  src="../imagenes/click-izquierdo.jpg">
+            </li>
+           
+            <li>Para acercar o alejar las vistas del laboratorio utilice la rueda del mouse.</li>
+            <li style="
+                  list-style: none;
+                  text-align: -webkit-center;
+              ">
+              <img style="height: 15vh; padding: 2vh 0;" src="../imagenes/rueda.jpg">
+            </li>
+          </ol>         
+         <!--  <h2>¿Cómo iniciar?</h2>
+          <ol>
+            <li>Para iniciar el laboratorio, dirígase al Menú de Etapas ubicado en la parte lateral izquierda y empiece presionando sobre la Etapa 1 (Inspección del Actuador)</li>
+            <li>Después se habilitarán los pasos que corresponden a la Etapa 1</li>
+          </ol> -->
+          
+    
+         
+        </section>
+        <footer class="modal-container-footer">
+          <button class="button is-primary" id="btn_cerrar_informacion">Continuar</button>
+        </footer>
+      </article>
+    </div>
+    <!-- End Ventana de informacion -->
+   <!-- notas de informacion -->
+   <div class="container-nota" id="nota_1" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>De click en el boton "siguiente" para ver los siguientes procesos.</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_2" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Estos son los EPPS que se utilizaran en este proceso.</p>
+         </div>
+      </div>
+   </div>
+   <!--end  notas de informacion -->
+   
+   <!--NOTAS-->
+  <div id="etiqueta_epp_1" class="bubble" style="display: none;">Arnes</div>
+  <div id="nota-2" class="bubble-2" style="display: none;">Guantes</div>
+  <div id="nota-3" class="bubble-3" style="display: none;">Lentes</div>
+  <div id="nota-4" class="bubble-4" style="display: none;">Casco</div>
+  <div id="nota-5" class="bubble-5" style="display: none;">Linea de Vida</div>
+
+
+   <!-- botones de siguiente -->
+
+   <div class="btn-next-container">
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_1">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   </div>
+   <div class="btn-next-container">
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_2">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   </div>
+   <div class="btn-next-container">
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_3">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   </div>
+   <div class="btn-next-container">
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_4">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   </div>
+   <div class="btn-next-container">
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_5">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   </div>
+   <div class="btn-next-container">
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_6">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   </div>
+   <div class="btn-next-container">
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_7">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   </div>
+   <div class="btn-next-container">
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_8">
+      Finalizar
+      <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   </div>
+
+
+
+  </div>
+</body>
+
+</html>

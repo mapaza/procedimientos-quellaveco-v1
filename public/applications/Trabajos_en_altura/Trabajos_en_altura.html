@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title>Trabajos en altura</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> 
+  <!-- favicons -->
+  <link rel="icon" type="image/png" href="../imagenes/favicon.png">
+  
+  <script src="v3d.js"></script>
+  <script src="Trabajos_en_altura.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="Trabajos_en_altura.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../styles/notas.css">
+  <link rel="stylesheet" type="text/css" href="../styles/preloader.css">
+  <link rel="stylesheet" type="text/css" href="../styles/info.css">
+  <link rel="stylesheet" type="text/css" href="../styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="../styles/etiquetas.css">
+  <link rel="stylesheet" type="text/css" href="../styles/quiz.css">
+  <link rel="stylesheet" type="text/css" href="../styles/recomendation.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+  <div id="v3d-container">
+    <!-- <div id="fullscreen-button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div> -->
+     <!-- preloader -->
+     <div class="container-preloader-main" id="preloader_screen">
+      <div class="container-preloader">
+        <div class="imagen-preloader">
+          <img src="../imagenes/logo-quellaveco.png" style="height: inherit;"/>
+        </div>
+        <div class="wrapper">
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+           <div class="loader">
+              <div class="dot"></div>
+           </div>
+        </div>
+        <div class="text">
+           Cargando
+        </div>
+        <div id="percentage"
+        >0%</div>
+      </div>
+     </div>
+      <!-- end preloader -->
+   <!--  CONTAINER IMAGEN EDUVERSO -->
+    <!-- <div>
+      <a href="https://www.eduverso.pe/" target="_blank">
+        <img id="powered_by_eduverso_img" class="container-powered-by" style="display: none;"  src="../imagenes/logo-eduverso.png">
+      </a>  
+    </div> -->
+    <!--  end CONTAINER IMAGEN EDUVERSO --> 
+
+   <!--  CONTAINER titulo -->
+   <div class="container-titulo-procedimiento" style="display: none;" id="titulo_container">
+      <h1 class="sixth">Trabajos en altura</h1>
+   </div>  
+   <!--  end CONTAINER titulo -->
+
+   <!--  Boton para abrir Ventana de informacion -->
+   <div class="container-boton-informacion" style="display: none;" id="btn_abrir_informacion">
+      <i class="fa-solid fa-info"></i>
+   </div>  
+   <!--  end  Boton para abrir Ventana de informacion-->
+
+    <!-- Ventana de informacion -->
+    <div class="modal" id="info_screen" style="display: none;">
+      <article class="modal-container">
+        <header class="modal-container-header">
+          <h1 class="modal-container-title">
+           
+          </h1>
+        <!--   <button class="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+            </svg>
+          </button> -->
+        </header>
+        <section class="modal-container-body rtf">
+          <h2>Bienvenido al procedimiento interactivo de "Trabajos en Altura"</h2>
+
+          <!-- <h2>Instrucciones</h2> -->
+          <p>Utilice los controles del mouse para interactuar con el escenario.</p>
+          <ol>
+            <li>Para rotar y desplazarse por las vistas del laboratorio utilice el botón izquierdo del mouse.</li>
+            <li style="
+                  list-style: none;
+                  text-align: -webkit-center;
+              ">
+              <img style="height: 10vh; padding: 2vh 0;"  src="../imagenes/click-izquierdo.jpg">
+            </li>
+           
+            <li>Para acercar o alejar las vistas del laboratorio utilice la rueda del mouse.</li>
+            <li style="
+                  list-style: none;
+                  text-align: -webkit-center;
+              ">
+              <img style="height: 10vh; padding: 2vh 0;" src="../imagenes/rueda.jpg">
+            </li>
+          </ol>         
+         <!--  <h2>¿Cómo iniciar?</h2>
+          <ol>
+            <li>Para iniciar el laboratorio, dirígase al Menú de Etapas ubicado en la parte lateral izquierda y empiece presionando sobre la Etapa 1 (Inspección del Actuador)</li>
+            <li>Después se habilitarán los pasos que corresponden a la Etapa 1</li>
+          </ol> -->
+          
+    
+         
+        </section>
+        <footer class="modal-container-footer">
+         <button class="button is-primary" id="btn_cerrar_informacion">Continuar</button>
+        </footer>
+      </article>
+    </div>
+    <!-- End Ventana de informacion -->
+
+
+    <!--  Boton para abrir Ventana de informacion  Movil-->
+    <div class="container-boton-informacion" style="display: none;" id="btn_abrir_informacion_mobile">
+      <i class="fa-solid fa-info"></i>
+   </div>  
+   <!--  end  Boton para abrir Ventana de informacion Movil-->
+    <!-- Ventana de informacion Movil-->
+    <div class="modal" id="info_screen_mobile" style="display: none;">
+      <article class="modal-container">
+        <header class="modal-container-header">
+          <h1 class="modal-container-title">
+           
+          </h1>
+        <!--   <button class="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+            </svg>
+          </button> -->
+        </header>
+        <section class="modal-container-body rtf">
+          <h2>Bienvenido al procedimiento interactivo de "Trabajos en caliente"</h2>
+ 
+          <!-- <h2>Instrucciones</h2> -->
+          <p>Utilice sus dedos para interactuar con el escenario. </p>
+          <ol>
+            <li>Presione con un dedo para desplazarse en la direcciones indicadas en las flechas ← ↑ → ↓, así como también para seleccionar los botones relacionados a cada paso del procedimiento.</li>
+            <li style="
+                  list-style: none;
+                  text-align: -webkit-center;
+              ">
+              <img style="height: 10vh; padding: 2vh 0;"  src="../imagenes/paso1.png">
+            </li>
+           
+            <li>Utilice el gesto de pellizco con sus dedos para acercar o alejar la vista en el módulo interactivo.</li>
+            <li style="
+                  list-style: none;
+                  text-align: -webkit-center;
+              ">
+              <img style="height: 10vh; padding: 2vh 0;" src="../imagenes/paso2.png">
+            </li>
+            <li>Utilice dos dedos y desplácelos hacia arriba o abajo para visualizar el objeto desde la perspectiva deseada.</li>
+            <li style="
+                  list-style: none;
+                  text-align: -webkit-center;
+              ">
+              <img style="height: 10vh; padding: 2vh 0;" src="../imagenes/paso3.png">
+            </li>
+          </ol>         
+         <!--  <h2>¿Cómo iniciar?</h2>
+          <ol>
+            <li>Para iniciar el laboratorio, dirígase al Menú de Etapas ubicado en la parte lateral izquierda y empiece presionando sobre la Etapa 1 (Inspección del Actuador)</li>
+            <li>Después se habilitarán los pasos que corresponden a la Etapa 1</li>
+          </ol> -->
+          
+    
+         
+        </section>
+        <footer class="modal-container-footer">
+          <button class="button is-primary" id="btn_cerrar_informacion_mobile" >Continuar</button>
+        </footer>
+      </article>
+    </div>
+    <!-- End Ventana de informacion Movil-->
+
+   <!-- notas de informacion -->
+   <div class="container-nota" id="nota_inicio" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>A continuación, algunas recomendaciones de seguridad para los trabajos en Altura. </p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_1" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Observe el andamio, este se encuentra en estado inoperativo. Por lo cuál, se muestra la tarjeta roja.</p>
+         </div>
+      </div>
+   </div>
+     <!-- QUIZ nota 2 -->
+  <section class="section-1" id="nota_2" style="display: none;">
+   <div class="main-quiz">
+       <div class="text-container">
+           <h3>¿Por qué el andamio se encuentra en estado inoperativo?</h3>
+          
+       </div>
+       <form>
+           <div class="quiz-options">
+               <input type="radio" class="input-radio one-a jshdgdgwgdwfdfwdwjfdjwwdwdco" id="one-a" name="yes-1" required>
+               <label class="radio-label jsjwjdwjdwjdwco" for="one-a">
+                   <span class="alphabet">A</span> Falta una diagonal
+               </label>
+               <input type="radio" class="input-radio one-b jshdgdgwgdwfdfwdwjfdjwwdwdin" id="one-b" name="yes-1">
+               <label class="radio-label jsjwjdwjdwjdwin" for="one-b">
+                   <span class="alphabet">B</span> Está desnivelado 
+               </label>
+               <input type="radio" class="input-radio one-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="one-c" name="yes-1">
+               <label class="radio-label jsjwjdwjdwjdwin" for="one-c">
+                   <span class="alphabet">C</span> No es autoestable 
+               </label>
+             <input type="radio" class="input-radio one-c jshdgdgwgdwfdfwdwjfdjwwdwdin" id="one-d" name="yes-1">
+               <label class="radio-label jsjwjdwjdwjdwin" for="one-d">
+                   <span class="alphabet">D</span> Está bien armado
+               </label>
+           </div>
+          
+       </form>
+   </div>
+</section>
+  <!-- end QUIZ nota 2 -->
+
+
+
+   <div class="container-nota" id="nota_3" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Presione sobre la diagonal faltante posicionada en el suelo, para ser colocada en el andamio.</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_4" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Presione sobre la tarjeta roja resaltada en celeste para reemplazarla por la tarjeta verde, indicando que el andamio se encuentra en estado operativo.</p>
+         </div>
+      </div>
+   </div>
+
+   <div class="container-nota" id="nota_5" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Presione sobre la línea de vida 1 resaltada en celeste para realizar su inspección</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_5_1" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Verifique el estado en el cuál se encuentra la línea de vida 1.</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_5_2" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Presione sobre la línea de vida 2 resaltada en celeste para realizar su inspección</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_5_3" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Verifique el estado en el cuál se encuentra la línea de vida 2.</p>
+         </div>
+      </div>
+   </div>
+
+   
+<!-- QUIZ linea de vida -->
+<section class="section-1" id="nota_5_4" style="display: none;" >
+   <div class="main-quiz">
+       <div class="text-container">
+           <h3>¿Cuál es la línea de vida que se encuentra en buen estado?</h3>
+       </div>
+       <form>
+         <div class="quiz-options">
+            <div class="opcion-elemento-buen-estado" id="option_linea_1">
+               Línea de vida 1
+            </div>
+            <div class="opcion-elemento-buen-estado" id="option_linea_2">
+               Línea de vida 2
+            </div>
+           <!--  <input type="radio" class="input-radio  " id="option_linea_1" required>
+            <label class="radio-label jsjwjdwjdwjdwco" id="label_linea_1">
+                <span class="alphabet">A</span> Línea de vida 1
+            </label>
+            <input type="radio" class="input-radio  " id="option_linea_2" >
+            <label class="radio-label jsjwjdwjdwjdwin"  id="label_linea_2">
+                <span class="alphabet">B</span> Línea de vida 2
+            </label> -->
+           
+        </div>
+          
+       </form>
+   </div>
+</section>
+<div  class="etiqueta_elemento" id="etiqueta_linea_1">
+   <div class="round-button">
+      <div class="round-button-circle">
+      <span class="round-button">1</span>
+      </div>
+      </div>
+</div>
+<div  class="etiqueta_elemento" id="etiqueta_linea_2">
+   <div class="round-button">
+      <div class="round-button-circle">
+      <span class="round-button">2</span>
+      </div>
+      </div>
+</div>
+  <!-- end QUIZ linea de vida  -->
+
+<div class="container-nota" id="nota_5_5" style="display: none;">
+   <div class="column">
+      <div class="card inception">
+         <h3 class="tab-heading inception">    
+         </h3>
+         <p>La línea de vida 1 es la que se encuentra en buen estado.</p>
+      </div>
+   </div>
+</div>
+
+   <div class="container-nota" id="nota_6" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Presione sobre el arnés 1 resaltado en celeste para realizar su inspección</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_6_1" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Verifique el estado en el cuál se encuentra el arnés 1.</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_6_2" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Presione sobre el arnés 2 resaltado en celeste para realizar su inspección</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_6_3" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Verifique el estado en el cuál se encuentra el arnés 2.</p>
+         </div>
+      </div>
+   </div>
+   <!-- QUIZ arnes-->
+<section class="section-1" id="nota_6_4" style="display: none;">
+   <div class="main-quiz">
+       <div class="text-container">
+           <h3>¿Cuál es el arnés que se encuentra en buen estado?</h3>
+       </div>
+       <form>
+         <div class="quiz-options">
+            <div class="opcion-elemento-buen-estado" id="option_arnes_1">
+               Arnés 1
+            </div>
+            <div class="opcion-elemento-buen-estado" id="option_arnes_2">
+               Arnés 2
+            </div>
+          
+        </div>
+          
+       </form>
+   </div>
+</section>
+<div  class="etiqueta_elemento" id="etiqueta_arnes_1">
+   <div class="round-button">
+      <div class="round-button-circle">
+      <span class="round-button">1</span>
+      </div>
+      </div>
+</div>
+<div  class="etiqueta_elemento" id="etiqueta_arnes_2">
+   <div class="round-button">
+      <div class="round-button-circle">
+      <span class="round-button">2</span>
+      </div>
+      </div>
+</div>
+<!-- end QUIZ arnes -->
+
+<div class="container-nota" id="nota_6_5" style="display: none;">
+   <div class="column">
+      <div class="card inception">
+         <h3 class="tab-heading inception">    
+         </h3>
+         <p>El arnés 1 es el que se encuentra en buen estado.</p>
+      </div>
+   </div>
+</div>
+
+ 
+
+   <div class="container-nota" id="nota_7" style="display: none;">
+      <div class="column">
+         <div class="card inception">
+            <h3 class="tab-heading inception">    
+            </h3>
+            <p>Con los elementos de seguridad seleccionados, se debe conectar la línea de anclaje en la roseta del andamio que esté a metro y medio de altura.</p>
+         </div>
+      </div>
+   </div>
+   <div class="container-nota" id="nota_8" style="display: none;">
+      <div class="column">
+          <div class="card inception">
+              <h3 class="tab-heading inception">           
+              </h3>
+              <p>
+                ¡Muy bien! Ahora, ya puede subir al andamio de manera segura.
+              </p>
+          </div>
+         
+      </div>
+    </div>
+   <!--end  notas de informacion -->
+   
+   <!--NOTAS-->
+<!--   <div id="etiqueta_epp_1" class="bubble" style="display: none;">Arnes</div>
+  <div id="nota-2" class="bubble-2" style="display: none;">Guantes</div>
+  <div id="nota-3" class="bubble-3" style="display: none;">Lentes</div>
+  <div id="nota-4" class="bubble-4" style="display: none;">Casco</div>
+  <div id="nota-5" class="bubble-5" style="display: none;">Linea de Vida</div> -->
+
+
+   <!-- botones de siguiente -->
+
+   <div class="btn-next-container">
+      
+         <div class="btn-siguiente-content" style="display:none;" id="btn_next_inicio">
+         Siguiente
+            <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+         </div>
+      
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_1">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_2">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+  
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_3">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+  
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_4">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+  
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_5">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+ 
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_5_1">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+  
+ 
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_5_2">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_5_3">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+  
+ 
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_5_4">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_5_5">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   
+
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_6">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+
+   
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_6_1">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_6_2">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   
+
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_6_3">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+ 
+   
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_6_4">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+   
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_6_5">
+      Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+ 
+   
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_7">
+         Siguiente
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+ 
+ 
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_9">
+         Recomendaciones adicionales 
+      </div>
+
+  
+      <div class="btn-siguiente-content" style="display:none;" id="btn_next_8">
+         Finalizar
+         <img class="img-siguiente" src="../imagenes/flecha-siguiente.gif">
+      </div>
+  
+ </div>
+<!-- end botones de siguiente -->
+
+<!-- container img -->
+<div class="container-nota-img" style="display:none;" id="nota_img_final">
+   <div class="column">
+       <div class="card-img inception">
+           <h3 class="tab-heading-img inception">
+             Recomendaciones adicionales          
+           </h3>
+           <img class="nota-img" src="../imagenes/trabajos_en_altura.png">
+       </div>      
+   </div>
+ </div>
+<!-- fin container img -->
+
+
+
+ 
+<div id="horizontalContainer" class="container-mb-horizontal center-mb-horizontal" style="display: none; width: 100vw; height: 100vh; margin: auto; top: 0; left: 0; background: #5d5555ba; position: absolute; z-index: 60; color: white; justify-content: center; align-items: center;">
+   <span style="font-size: 3vh; margin: 0 7vh; text-align: center; line-height: 4vh; font-weight: bold;">
+     Pon tu celular en posición horizontal para poder acceder a la experiencia
+     <br>
+     <img style="width: 13vh; filter: invert(1); margin: 3vh auto;" src="../imagenes/horizontal-icono.png" alt="Icono horizontal">
+   </span>
+ </div>
+ 
+   </div>
+   <script>
+     if (
+     /Android/i.test(navigator.userAgent) ||
+     /webOS/i.test(navigator.userAgent) ||
+     /iPhone/i.test(navigator.userAgent) ||
+     /iPad/i.test(navigator.userAgent) ||
+     /iPod/i.test(navigator.userAgent) ||
+     /BlackBerry/i.test(navigator.userAgent) ||
+     /Windows Phone/i.test(navigator.userAgent)
+ ) {
+     window.matchMedia("(orientation:portrait)").addEventListener("change", function(e) {
+         var portrait = e.matches;
+         var horizontalContainer = document.getElementById("horizontalContainer");
+         if (horizontalContainer) {
+             horizontalContainer.style.display = portrait ? "flex" : "none";
+         }
+     });
+ } else {
+     var horizontalContainer = document.getElementById("horizontalContainer");
+     if (horizontalContainer) {
+         horizontalContainer.style.display = "none";
+     }
+ }
+   </script>
+ </body>
+ 
+ </html>
+ 

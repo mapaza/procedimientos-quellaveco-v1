@@ -1,0 +1,54 @@
+<?xml version="1.0" ?><xml><category name="funcion 1">
+        <block type="procedures_defnoreturn" xmlns="https://developers.google.com/blockly/xml">
+  <field name="NAME">ocultar_botones</field>
+  <comment h="80" pinned="false" w="160">Describe this function...</comment>
+  <statement name="STACK">
+    <block type="setHTMLElemStyle">
+      <field name="PROPERTY">display</field>
+      <field name="PARENT">FALSE</field>
+      <value name="VALUE">
+        <block type="text">
+          <field name="TEXT">none</field>
+        </block>
+      </value>
+      <value name="ID">
+        <shadow type="text">
+          <field name="TEXT">inicio_1</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="setHTMLElemStyle">
+          <field name="PROPERTY">display</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text">
+              <field name="TEXT">none</field>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT">sgt_1_1</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="setHTMLElemStyle">
+              <field name="PROPERTY">display</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text">
+                  <field name="TEXT">none</field>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text">
+                  <field name="TEXT">sgt_1_2</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </statement>
+</block>
+        </category></xml>
